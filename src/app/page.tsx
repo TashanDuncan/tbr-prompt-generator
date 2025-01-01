@@ -8,7 +8,7 @@ export default async function Home() {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-pink-300">
       <h1 className="mb-8 text-4xl font-bold text-center text-gray-900">
         Christina&apos;s TBR Prompt Generator
       </h1>
