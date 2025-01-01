@@ -1,7 +1,6 @@
 import { promises as fs } from "fs";
-import { PromptPicker } from "./PromptPicker";
-import { RandomLetterPicker } from "./RandomLetterPicker";
-import { ColourPicker } from "./ColourPicker";
+import Randomiser from "./Randomiser";
+import { alphabet, colours, genres } from "./RandomiserUtils";
 
 export default async function Home() {
   const file = await fs.readFile(
@@ -11,12 +10,13 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center justify-start md:justify-center min-h-screen bg-pink-300">
-      <h1 className="mb-8 text-4xl font-bold text-center text-gray-900">
+      <h1 className="m-8 text-4xl font-bold text-center text-gray-900">
         Christina&apos;s TBR Prompt Generator
       </h1>
-      <PromptPicker prompts={file.split("\n")} />
-      <RandomLetterPicker />
-      <ColourPicker />
+      <Randomiser items={file.split("\n")} buttonText="Pick a Prompt" />
+      <Randomiser items={alphabet} buttonText="Pick a Letter" />
+      <Randomiser items={genres} buttonText="Pick a Genre" />
+      <Randomiser items={colours} buttonText="Pick a Colour" />
     </div>
   );
 }
