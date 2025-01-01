@@ -65,3 +65,4 @@ A book about food ( food on cover, about food, food truck, etc )
 A book featuring an activity on my bucket list
 Random wheel chooses genre
 Audiobook
+Let a family member to pick a random number
